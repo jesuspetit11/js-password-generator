@@ -1,0 +1,51 @@
+    
+*,*:before, *:after {
+
+    box-sizing: border-box ; 
+    padding: 0 ;
+    margin: 0 ;  
+    font-family: 'Share Tech Mono', monospace;
+    
+    }
+
+    img{
+        max-width: 2rem;
+        cursor: pointer;
+    }
+
+    body{
+        background:#4682B4;
+        color: #000;
+    }
+    
+    .contenedor{
+        width: auto;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 3rem;
+    }
+    input#password{
+        margin-right: 20px;
+        font-size: 1.5rem;
+        border: 0;
+        outline: 0;
+    }
+    .display{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 100px;
+        border-radius: 10px;
+    }
+    .container span{
+        color: #001c1c;
+    text-decoration: underline;
+
+    }
