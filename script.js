@@ -2,6 +2,7 @@ const passBox = document.querySelector("#password");
 const btnCrearPassword = document.querySelector(".btnPass");
 const copyPass = document.querySelector("img");
 const contenedorPrincipal = document.querySelector(".container");
+const mensajes = document.querySelector("#mensaje");
 
 const length = 12;
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -34,16 +35,25 @@ function createPassword() {
 
 function copyPassword() {
     let password = passBox.value;
+
     navigator.clipboard.writeText(password);
 
+    limpiarHTML(mensajes);
         const exitoDiv = document.createElement("DIV");
         exitoDiv.classList.add("exito");
         exitoDiv.textContent = "Copied to clipboard!"
-        contenedorPrincipal.appendChild(exitoDiv);
+        mensajes.appendChild(exitoDiv);
         setTimeout(() => {
             exitoDiv.remove();
         }, 1000);
 }
 
+function limpiarHTML(elementoPadre) {
+    // Verificar si el elemento padre tiene hijos
+    while (elementoPadre.firstChild) {
+        // Eliminar el primer hijo del elemento padre
+        elementoPadre.removeChild(elementoPadre.firstChild);
+    }
+}
 
 
