@@ -63,3 +63,8 @@
         border-radius: 5px;
         width: 12.5rem;
     }
+    .exito{
+        background: green;
+        color: white;
+        margin-top: 10px;
+    }

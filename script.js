@@ -1,7 +1,7 @@
 const passBox = document.querySelector("#password");
 const btnCrearPassword = document.querySelector(".btnPass");
 const copyPass = document.querySelector("img");
-console.log(copyPass);
+const contenedorPrincipal = document.querySelector(".container");
 
 const length = 12;
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -35,4 +35,15 @@ function createPassword() {
 function copyPassword() {
     let password = passBox.value;
     navigator.clipboard.writeText(password);
+
+        const exitoDiv = document.createElement("DIV");
+        exitoDiv.classList.add("exito");
+        exitoDiv.textContent = "Copied to clipboard!"
+        contenedorPrincipal.appendChild(exitoDiv);
+        setTimeout(() => {
+            exitoDiv.remove();
+        }, 1000);
 }
+
+
+
